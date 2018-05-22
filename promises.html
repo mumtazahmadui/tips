@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>JavaScript DOM Course</title>
+</head>
+<body>
+    <script>
+    // Promises is handling of async operations.
+    // Promise gives us control over our async function and allows us to either resolve or reject an operation request.
+
+    const isSmallThenTen = (num) => {
+        return new Promise((resolve, reject) => {
+            if(num < 10) {
+                resolve(true)
+            } else {
+                reject(false)
+            }
+        })
+    };
+
+    isSmallThenTen(22)
+      .then(res => console.log('The number is smaller then 10'))
+      .catch(err => console.log('The number is not smaller then 10'))
+  
+  // Promise.all
+  const timeoutIn = (time) => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => resolve(time), time)
+        })
+    }
+    const timeoutInArr = [
+        timeoutIn(2000),
+        timeoutIn(4000),
+        timeoutIn(8000)
+    ]
+    Promise.all(timeoutInArr)
+        .then(values => {
+            console.log('All the promises are resolved now you can run your code', values)
+            // your code
+        })
+
+    </script>
+</body>
+
+</html>
+
+ 

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript DOM Course</title>
+</head>
+
+<body>
+    
+
+    <script>
+       
+//        function add () {
+//             var args = Array.prototype.slice.call(arguments);
+         
+//             var fn = function () {
+//                 var arg_fn = Array.prototype.slice.call(arguments);
+//                 return add.apply(null, args.concat(arg_fn));
+//             }
+         
+//             fn.valueOf = function () {
+//                 return args.reduce(function(a, b) {
+//                     return a + b;
+//                 })
+//             }
+         
+//             return fn;
+//         }
+
+// console.log(add(1,2,4)(7));
+// console.log(add(1)(2));
+// console.log(add(1)(2)(5));
+    
+        // function sum () {
+        //       var sum = 0;
+        //       for(var i=0; i<arguments.length; i++) {
+        //         sum += arguments[i];
+        //       }
+        //       return sum;
+        // }
+       // console.log(add(4,5, (11)));
+
+       // function add(a,b){
+
+       //      if(b !== undefined){
+
+       //          console.log(a + b);
+       //          return;
+
+       //      }
+
+       //      return function(b){
+       //          console.log(a + b);
+       //      }
+
+       //  }
+
+       //  console.log(add(3)(3));
+       //  // 6
+
+       function add () {
+          var total = 0;
+          for (var i = 0; i < arguments.length; i++) {
+            var num = parseFloat(arguments[i])
+
+            if (isNaN(num) === false ) {
+              total += num
+            }
+          }
+          return total
+        }
+        console.log(add(3)(3));
+
+    </script>
+</body>
+
+</html>
+
+ 
