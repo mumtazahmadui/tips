@@ -48,3 +48,22 @@ function sum () {
   // return sum;
 }
 console.log(sum(1,7,4,(7)));
+
+let arr = 'welcome to test page';
+let acvalue='';
+let arrsp = arr.split(' ');
+for(let i = 0; i<arrsp.length; i++){
+  acvalue+=rev(arrsp[i]) + ' ';
+}
+
+function rev(str){
+  //return str.split('').reverse().join('');
+  let inp = '';
+  for(let i = str.length-1; i>=0; i--) {
+    inp+=str[i];
+  }
+  return inp;
+}
+
+console.log(acvalue);
+
